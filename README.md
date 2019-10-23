@@ -27,6 +27,11 @@ Usage
 3. Execute `java -jar dmn-xlsx-cli-0.2.0.jar --inputs A,B,C --outputs D,E,F path/to/input/file.xlsx path/to/output/file.dmn`. Note that this example assumes the columns A, B, and C are inputs and D, E, F are outputs. You can set these as you like.
 4. Obtain the dmn table and import it in Camunda modeler or in the [online DMN table editor](http://demo.bpmn.io/dmn).
 
+#### Docker Image
+1. build the image: ```mvn install```
+2. ```cd /path/to/your/file```
+3. run container: ```docker run --rm  -v $(pwd):/data devshred/xlsx2dmn:0.2.1-SNAPSHOT --inputs <columns> --outputs <columns> /data/<file>.xlsx /data/<file>.dmn```
+
 #### Java
 
 ##### Artifacts
